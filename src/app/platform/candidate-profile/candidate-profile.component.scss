@@ -1,0 +1,36 @@
+.mat-grid-list {
+
+    width: 600px;
+    margin-left: 310px;
+    margin-top: 30px;
+ 
+}
+.leftDiv{
+    margin-right:auto;
+    margin-left:  550px; 
+   
+}
+.disableRed{
+    background-color: green;
+    width:130px;
+    height:70px;
+    margin-top:5px;
+   
+}
+button[disabled=disabled], button:disabled {
+    background-color: red;
+}
+
+p{
+   font-size: 40px;
+}
+.color-btn{
+    background-color: grey;
+}
+span {
+    font-size: 19px;
+    margin-left : 68px;
+}
+.btn2{
+    height: 35px;
+}

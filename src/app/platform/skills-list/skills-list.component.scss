@@ -1,0 +1,21 @@
+.item {
+    text-align: center;
+    color: silver;
+}
+.names {
+    text-align: center;
+    font-size: 23px; 
+}
+button[disabled=disabled], button:disabled {
+    background-color: blue;
+}
+
+.mat-grid-list {
+    margin-top:10px;
+    margin-bottom: 10px;
+ 
+}
+.center{
+    margin-right: auto;
+    margin-left: auto; 
+}

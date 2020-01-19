@@ -1,0 +1,24 @@
+ <div *ngIf="hide"> 
+ <p>
+    {{_candidate.name}} {{_candidate.surname}}  {{_candidate.dateOfBirth}}
+    
+     
+  </p>
+<span >
+  Click on skill to remove or:  <button (click)="addNewSkill()" class="color-btn"> Add new skill</button> or  <button (click)="deleteCandidate()" class="color-btn btn2"> Delete candidate</button>
+</span>
+
+    <div>
+    <mat-grid-list cols="4" rowHeight="4:2" >
+        <mat-grid-tile *ngFor="let skill of _candidate.skills; index as i">
+            <button type="button" class="btn btn-primary item disableRed" title="Remove {{skill.name}} "  onclick="this.disabled=true" (click)='removeSkill(skill)'>{{skill.name}}</button>
+    </mat-grid-tile>
+    
+    </mat-grid-list>
+
+</div>
+
+
+</div>
+
+   

@@ -1,0 +1,25 @@
+<h3 style="text-align: center;"> New skill: </h3>
+<div mat-dialog-content>
+    <div class='panel-body'>
+        <div>
+            <form [formGroup]="skillForm">
+                <table>
+                    <tr>
+                        <th> Name:</th>
+                        <th>
+                            <input type="text" formControlName="name" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                        </th>
+                    </tr>
+                   
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+<div mat-dialog-actions>
+    <div class="center">
+        <button class="btn btn-primary mr-1" (click)="onSubmit()">New skill</button>
+        <button class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+    </div>
+</div>

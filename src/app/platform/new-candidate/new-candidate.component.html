@@ -1,0 +1,68 @@
+<h3 style="text-align: center;"> New candidate: </h3>
+<div mat-dialog-content>
+    <div class='panel-body'>
+        <div>
+
+
+            <form [formGroup]="registerForm">
+
+                <table>
+                    <tr>
+                        <th> Name:</th>
+                        <th>
+                            <input type="text" formControlName="name" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th> Surname:</th>
+                        <th>
+                            <input type="text" formControlName="surname" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.surname.errors }" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th> Email:</th>
+                        <th>
+                            <input type="email" formControlName="email" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th> Phone number:</th>
+                        <th>
+                            <input type="number" formControlName="phoneNumber" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th> Date of Birth:</th>
+                        <th>
+                            <input type="date" formControlName="dateOfBirth" class="form-control"
+                                [ngClass]="{ 'is-invalid': submitted && f.dateOfBirth.errors }" min="1900-01-01" [max]="maxDate" />
+                        </th>
+                    </tr>
+
+                </table>
+
+
+            </form>
+
+
+        </div>
+
+
+
+    </div>
+
+</div>
+
+<div mat-dialog-actions>
+    <!-- <button class="btn-submit" mat-button [mat-dialog-close]  [disabled]="!candidateForm.valid" type="submit">Ok</button> -->
+    <div class="center">
+
+
+        <button class="btn btn-primary mr-1" (click)="onSubmit()">Register</button>
+        <button class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+    </div>
+</div>

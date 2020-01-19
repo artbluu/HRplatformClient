@@ -1,0 +1,17 @@
+<h3 style="text-align: center;"> Skills: </h3>
+<div mat-dialog-content>
+  <div class='panel-body'>
+
+    <mat-grid-list cols="4" rowHeight="2:1.2">
+        <mat-grid-tile *ngFor="let skill of _skills; index as i">
+            <button style="background-color: green;width:130px;height:70px;" type="button" class="btn btn-primary item"  onclick="this.disabled=true" (click)='clickAddSkill(skill)'>{{skill.name}}</button>
+        </mat-grid-tile>
+      </mat-grid-list>
+</div>
+</div>
+<div mat-dialog-actions>
+  <div class="center">
+    <button class="btn btn-primary mr-1" *ngIf="hide" (click)="findCandidateWithSkills()">Find candidate</button>
+      <button class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+  </div>
+</div>

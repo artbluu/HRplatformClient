@@ -1,0 +1,36 @@
+<div class= "row" *ngIf="!showProfile">
+    <div class="col classBorder">
+      <table matSort (matSortChange)="sortData($event)">
+          <tr>
+            <th mat-sort-header="name">Name</th>
+            <th mat-sort-header="surname">Surname</th>
+            <th mat-sort-header="phoneNumber">Phone</th>
+            <th mat-sort-header="email">Email</th>
+            <th mat-sort-header="dateOfBirth">Birth date</th>
+            <th mat-sort-header="showCandidate">Show profile</th>
+          </tr>
+        
+          <tr *ngFor="let candidate of sortedCandidates" >
+           
+          
+            <td>{{candidate.name}}</td>
+            <td>{{candidate.surname}}</td>
+            <td>{{candidate.phoneNumber}}</td>
+            <td>{{candidate.email}}</td>
+            <td>{{candidate.dateOfBirth}}</td>
+            <td><button (click)="showCandidate(candidate)" class="color-btn" title = "Show candidate profile">profile </button></td>
+       
+            
+          </tr>
+        </table>
+      </div>
+
+    
+      </div>
+      <div class="row center" *ngIf="!showProfile">
+        <input type="text" title="Search by name!" #_search  /> 
+        <button class="color-btn" (click)="search(_search.value)" > search</button>
+    
+      </div>
+
+<app-candidate-profile *ngIf="showProfile"  [_candidate] = "_candidate"> </app-candidate-profile>
